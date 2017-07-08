@@ -19,8 +19,17 @@
 <body>
 <div ng-app="WhitbreadSample">
     <div ng-controller="VenueSearchPageController as vm">
-        <div ng-repeat="venue in vm.venues">
-            <venue-component venue="venue" test="item.firstName"></venue-component>
+        <div class="searchSection">
+            <form ng-submit="vm.search(vm.searchTerm)">
+                Find Venues
+                <input type="text" ng-model="vm.searchTerm" />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+        <div class="resultsSection">
+            <div ng-repeat="venue in vm.venues">
+                <venue-component venue="venue" test="item.firstName"></venue-component>
+            </div>
         </div>
     </div>
 </div>
