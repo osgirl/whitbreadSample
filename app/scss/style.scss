@@ -20,4 +20,8 @@ body {
 
 .resultsSection{
   color: $secondary-colour;
+  .venueTile{
+    box-shadow: 1px 1px 10px 0px rgba(50, 50, 50, 0.62);
+    height: 300px;
+  }
 }
