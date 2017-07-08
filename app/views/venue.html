@@ -1,4 +1,14 @@
-<div>Venue Component</div>
-<div>{{$ctrl.venue}}</div>
-
-<div>{{ctrl.test}}</div>
+<div class="result col-md-4">
+    <div class="venueHeading">
+        <h1>{{ $ctrl.venue.venue.name }}</h1>
+    </div>
+    <div class="image">
+        <img ng-src="{{$ctrl.getImageUrl($ctrl.venue.venue.photos)}}" alt=" {{$ctrl.venue.venue.name}} image" />
+    </div>
+    <div class="detail">
+        <h3></h3>
+        <p>{{ $ctrl.venue.tips[0].text }}</p>
+        <a href="{{ $ctrl.venue.venue.url }}">link</a>
+        <p>{{ $ctrl.venue.venue.rating }}</p>
+    </div>
+</div>

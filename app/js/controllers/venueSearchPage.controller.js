@@ -23,11 +23,11 @@
         }
 
         vm.$onInit = function(){
-            console.log(vm);
+            // console.log(vm);
         }
 
         vm.$onChanges = function(changes){
-            console.log(changes);   
+            // console.log(changes);   
         }
     }
 
