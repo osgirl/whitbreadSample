@@ -17,13 +17,15 @@
         ////////////
 
         function getData(){
-            var def = $q.defer()
+            var def = $q.defer(),
+                urlStart = 'https://api.foursquare.com/v2/venues/explore?near=',
+                searchTerm = 'london',
+                urlEnd = '&venuePhotos=1&oauth_token=CT0R0Q0KHYN23UNMR5SBZC22C4QCBXNOXQ0KYGQG4A3PGVSC&v=20170704',
+                url = urlStart + searchTerm + urlEnd;
 
-            var data = [{firstName:"John", lastName:"Doe", age:46},
-            {firstName:"John", lastName:"Doe", age:46},
-            {firstName:"John", lastName:"Doe", age:46}];
-
-            def.resolve(data);
+            $http.get(url).then(function(response) {
+                def.resolve(response.data.response);
+            });
 
             return def.promise;
         }

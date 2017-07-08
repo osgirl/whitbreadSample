@@ -19,8 +19,8 @@
 <div ng-app="WhitbreadSample">
     <div ng-controller="VenueSearchPageController as vm">
 
-        <div ng-repeat="item in vm.data">
-            <venue-component venue="item" test="item.firstName"></venue-component>
+        <div ng-repeat="venue in vm.venues">
+            <venue-component venue="venue" test="item.firstName"></venue-component>
         </div>
     </div>
 </div>

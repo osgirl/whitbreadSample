@@ -9,8 +9,7 @@
 
     function VenueSearchPageController(DataService) {
         var vm = this;
-        vm.venue = 'test venue';
-        vm.data = [];
+        vm.venues = []
         console.log('VenueSearchPageController', vm);
 
         activate();
@@ -18,8 +17,8 @@
         
         function activate(){
             DataService.getData().then(function(data){
-                vm.data = data;
-                console.log(vm.data);
+                vm.venues = data.groups[0].items;
+                console.log(vm.venues);
             })
         }
 
