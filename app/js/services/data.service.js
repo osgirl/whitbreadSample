@@ -19,7 +19,11 @@
         function getData(){
             var def = $q.defer()
 
-            def.resolve({data: 'somedata'})
+            var data = [{firstName:"John", lastName:"Doe", age:46},
+            {firstName:"John", lastName:"Doe", age:46},
+            {firstName:"John", lastName:"Doe", age:46}];
+
+            def.resolve(data);
 
             return def.promise;
         }

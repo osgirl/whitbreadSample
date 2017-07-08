@@ -3,10 +3,11 @@
 
     angular.module('WhitbreadSample', [])
         .component('venueComponent', {
-            templateUrl: 'venue.html',
+            templateUrl: 'views/venue.html',
             controller: 'VenueController',
             bindings: {
-                venue: '='
+                venue: '=',
+                test: '@'
             }
         })
 

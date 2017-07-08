@@ -16,10 +16,12 @@
 </head>
 
 <body>
-
 <div ng-app="WhitbreadSample">
     <div ng-controller="VenueSearchPageController as vm">
 
+        <div ng-repeat="item in vm.data">
+            <venue-component venue="item" test="item.firstName"></venue-component>
+        </div>
     </div>
 </div>
 </body>
