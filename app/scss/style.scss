@@ -1,5 +1,6 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: blue;
+$secondary-colour: black;
 
 
 body {
@@ -7,4 +8,16 @@ body {
   color: $primary-color;
   width: 100%;
   
+}
+
+.searchSection{
+  display: flex;
+  justify-content: center;
+  .searchForm{
+    width: 200px;
+  }
+}
+
+.resultsSection{
+  color: $secondary-colour;
 }

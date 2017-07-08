@@ -19,9 +19,9 @@
 <body>
 <div ng-app="WhitbreadSample">
     <div ng-controller="VenueSearchPageController as vm">
-        <div class="searchSection">
-            <form ng-submit="vm.search(vm.searchTerm)">
-                Find Venues
+        <div class="searchSection jumbotron">
+            <form class="searchForm" ng-submit="vm.search(vm.searchTerm)">
+                <h2>Find Venues</h2>
                 <input type="text" ng-model="vm.searchTerm" />
                 <input type="submit" value="Submit" />
             </form>
